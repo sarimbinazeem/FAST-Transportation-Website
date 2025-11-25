@@ -1,0 +1,44 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navigation
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2%;
+  background-color: #003366; 
+  color: #FFFFFF;
+  position: sticky;
+  transition: background 0.3s;
+  font-size: 25px;
+  font-weight: 1000;
+}
+
+.nav-link
+{
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover
+{
+  color: #1E90FF; 
+}
+
+#logo
+{
+  width: 120px;
+  margin-right: 700px;
+}
+
+#darkMode
+{ 
+  width: 60px;
+  height: 50px;
+
+}
+
