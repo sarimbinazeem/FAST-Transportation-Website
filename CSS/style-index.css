@@ -112,6 +112,7 @@ body {
 .btn:hover {
   background-color: #1c86ee;
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .btn-subtext {
