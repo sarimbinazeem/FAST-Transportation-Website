@@ -56,3 +56,19 @@ setInterval(switchSlides,3000);
 
 
 
+const backToTop = document.getElementById("backToTop");
+
+//Button Appearance 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) { //Scroll Y is scrolling horizontally
+        backToTop.classList.add("show"); /*Add Show In Class List So That The Button Appears*/ 
+    } 
+    else {
+        backToTop.classList.remove("show"); /*Remove THe Button From The Screen iF the button is already at the top*/
+    }
+});
+
+//Now When It Is Cicked It Takes To Top Smoothly
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});

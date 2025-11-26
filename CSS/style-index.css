@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
-
 }
 
 #navigation {
@@ -44,7 +43,6 @@ body {
 }
 
 .hero {
-  background-color: #ffffff;
   text-align: center;
   padding: 3rem 1rem;
 }
@@ -184,25 +182,52 @@ body {
 .footer-about,
 .footer-links,
 .footer-contact {
-    flex: 1;
-    min-width: 250px;
-    font-size: 20px;
+  flex: 1;
+  min-width: 250px;
+  font-size: 20px;
 }
 
-.footer-links ul{
+.footer-links ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-links ul li{
+.footer-links ul li {
   margin: 0.5rem 0;
 }
 
-.footer-rights
-{
+.footer-rights {
   text-align: center;
-  margin-top:2rem;
+  margin-top: 2rem;
   padding-top: 0.5rem;
   font-size: 1rem;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px; /*To Put it on bottom-right*/
+  right: 20px;
+  background: #0077ff;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 30px;
+  display: none; /*So That The Icon Comes Only When It Goes Down*/
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /*So that it comes at top*/
+  transition: 0.3s; /*Transition Time For It To Scale*/
+}
+
+.back-to-top.show {
+    display: flex; /*Display When It Goes At Bottom*/
+}
+
+.back-to-top:hover {
+    transform: scale(1.1); /*Hovering Makes It Big*/
+
+}
