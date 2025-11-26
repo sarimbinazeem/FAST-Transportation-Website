@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fast Transportation</title>
-    <link rel="stylesheet" href="../css/style-index.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="../css/style-index.css" />
+  </head>
+  <body>
     <nav>
-        <div id = "navigation"> 
-            <img src="../assets/fast.png" id="logo">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href = "nadeem.html" class="nav-link"> Nadeem</a>
-                <a href = "jadoon.html" class="nav-link">Jadoon</a>
-                <a href = "about.html" class="nav-link">About Us</a>
-                <a href = "contact.html" class="nav-link">Contact Us</a>
-                <button id="darkMode">🌙</button>
-        </div>
+      <div id="navigation">
+        <img src="../assets/fast.png" id="logo" />
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="nadeem.html" class="nav-link"> Nadeem</a>
+        <a href="jadoon.html" class="nav-link">Jadoon</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <button id="darkMode">🌙</button>
+      </div>
     </nav>
 
-    <section class = "hero">
-        <div class="slideshow">
-            <img src="../assets/campus1.png" class="active">
-            <img src="../assets/campus2.png" class="slide">
-            <img src="../assets/campus3.png" class="slide">
+    <section class="hero">
+      <div class="slideshow">
+        <div class="slide active">
+          <img src="../assets/campus1.png" alt="" /> <!--Alt is used as a replacement of the image when image doesnt load-->
+          <div class="text-overlay">
+            <h1 id="greeting"></h1>
+            <h2>Welcome to FAST Transportation Website</h2>
+          </div>
         </div>
 
-        <div class="buttons">
-            <a href="nadeem.html" class="btn">Nadeem Transports</a>
-            <a href="jadoon.html" class="btn">Jadoon Transports</a>
+        <div class="slide">
+          <img src="../assets/campus2.png" alt="" />
+          <div class="text-overlay">
+            <h1 id="greeting2"></h1>
+            <h2>Welcome to FAST Transportation Website</h2>
+          </div>
         </div>
+
+        <div class="slide">
+          <img src="../assets/campus3.png" alt="" />
+          <div class="text-overlay">
+            <h1 id="greeting3"></h1>
+            <h2>Welcome to FAST Transportation Website</h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="buttons">
+        <a href="nadeem.html" class="btn">Nadeem Transports</a>
+        <a href="jadoon.html" class="btn">Jadoon Transports</a>
+      </div>
     </section>
 
     <script src="../JavaScript/script-index.js"></script>
-     
-</body>
+  </body>
 </html>
