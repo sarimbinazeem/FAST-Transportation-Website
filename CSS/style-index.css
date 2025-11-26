@@ -151,3 +151,55 @@ body {
   margin-top: 10px;
 }
 
+.foot {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 5rem 2rem 2rem 2rem;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.foot a:hover {
+  color: #1c86ee;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  /*To get it to center*/
+  margin: 0 auto;
+  gap: 35rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+    flex: 1;
+    min-width: 250px;
+    font-size: 20px;
+}
+
+.footer-links ul{
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li{
+  margin: 0.5rem 0;
+}
+
+.footer-rights
+{
+  text-align: center;
+  margin-top:2rem;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+}
+
