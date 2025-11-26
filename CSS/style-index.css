@@ -5,6 +5,26 @@ body {
   flex-wrap: wrap;
 }
 
+
+:root{ /*Root is The Parent Selector That Make Global Variables That Can Be Accessible AnyWhere Below*/
+  /* --variable: -> this is how global variable is defined in css */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --box-bg: #f1f1f1;
+  --header-bg: rgba(0,0,0,0.4);
+  --footer-bg: #222;
+  --footer-text: #eee;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --box-bg: #1f1f1f;
+  --header-bg: rgba(255,255,255,0.1);
+  --footer-bg: #111;
+  --footer-text: #ddd;
+}
+
 #navigation {
   flex-wrap: wrap;
   display: flex;
@@ -37,10 +57,7 @@ body {
   margin-right: 300px;
 }
 
-#darkMode {
-  width: 60px;
-  height: 50px;
-}
+
 
 .hero {
   text-align: center;
@@ -213,12 +230,12 @@ body {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  cursor: pointer;
+  cursor: pointer;  /*cursor changes to hand icon when at the button*/
   font-size: 30px;
   display: none; /*So That The Icon Comes Only When It Goes Down*/
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* x-axis pixels, y-axis pixels , blur radius, rgba(red,green,blue,opacity) */
   z-index: 1000; /*So that it comes at top*/
   transition: 0.3s; /*Transition Time For It To Scale*/
 }
@@ -228,6 +245,53 @@ body {
 }
 
 .back-to-top:hover {
-    transform: scale(1.1); /*Hovering Makes It Big*/
+    transform: scale(1.1); /*Hovering Makes It Big  1.1-> 10% bigger, 0.9->10% smaller*/
 
+}
+
+
+.dark-toggle {
+  position: fixed;
+  bottom:20px;
+  left:20px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10000; 
+  background: var(--box-bg);
+  color: var(--text-color);
+  border:  none;
+  transition: 0.3s;
+  padding: 8px 12px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+
+.header-text {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+}
+
+.buttons {
+  background: var(--box-bg);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  transition: 0.3s;
+}
+
+footer a {
+  color: var(--footer-text);
 }

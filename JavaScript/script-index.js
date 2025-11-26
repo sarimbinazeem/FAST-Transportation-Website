@@ -72,3 +72,25 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// DARK MODE
+const toggleBtn = document.getElementById("darkModeToggle"); //gets dark mode button 
+
+// Load saved mode
+if (localStorage.getItem("darkMode") === "enabled") { /*Local Storyage Saves data in browser*/
+    document.body.classList.add("dark-mode"); /*Adds Dark Mode PROPERTIES In Body*/
+    toggleBtn.textContent = "🌞"; /*Changes Button Text*/
+}
+
+// On click
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled"); /*Local Storage Saves That The Dark Mode Is Enabled*/
+        toggleBtn.textContent = "🌞"; //Changes To Sun Emoji
+    } else {
+        localStorage.setItem("darkMode", "disabled"); /*Local Storage Saves That The Dark Mode Is Disabled*/
+        toggleBtn.textContent = "🌙"; //Changes To Moon Emoji
+    }
+});
