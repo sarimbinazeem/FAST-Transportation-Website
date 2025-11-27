@@ -1,0 +1,40 @@
+
+
+.nadeem-header{
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.nadeem-title
+{
+    color: #003366;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.nadeem-subtitle
+{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: gray;
+    margin-bottom: 2rem;
+}
+
+.search-section{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#routeSearch
+{
+    border-radius: 0.3rem;
+    width:50%;
+    height: 30px;
+    max-width: 500px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    border: 2px solid #ccc;
+}
