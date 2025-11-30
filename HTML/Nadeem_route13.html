@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Route 1 - Nadeem Transport</title>
+
+  <!-- Icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Your shared CSS (change path if needed) -->
+  <link rel="stylesheet" href="../CSS/route.css" />
+  <link rel="stylesheet" href="../CSS/index.css" />
+  <link rel="stylesheet" href="../CSS/nadeem.css" />
+</head>
+<body>
+  <!-- NAVBAR: copy your existing navbar here so it matches main site -->
+  <header>
+    <nav>
+      <div id="navigation">
+        <img src="../assets/fast.png" id="logo" alt="logo"/>
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../nadeem.html" class="nav-link">Nadeem</a>
+        <a href="../jadoon.html" class="nav-link">Jadoon</a>
+        <a href="../about.html" class="nav-link">About Us</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <div class="page-controls">
+      <button id="darkToggle" class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button id="backTop" class="back-to-top" aria-label="Back to top">⬆</button>
+    </div>
+
+    <section class="nadeem-header">
+      <h1 class="nadeem-title">Nadeem Transport Routes</h1>
+      <h2 class="route-title">Route 13 - Esa Nagri</h2>
+      <p class="route-sub">Start point: Esa Nagri</p>
+    </section>
+
+    <!-- TAB / ACCORDION -->
+    <div class="tabs" role="tablist" aria-label="Route Sections">
+      <button class="tab-button active" data-target="routeInfo" aria-controls="routeInfo" aria-expanded="true">
+        <i class="fa-solid fa-route" aria-hidden="true"></i> Route Information
+      </button>
+
+      
+
+      <button class="tab-button" data-target="driverInfo" aria-controls="driverInfo" aria-expanded="false">
+        <i class="fa-solid fa-user-tie" aria-hidden="true"></i> Driver Info
+      </button>
+    </div>
+
+    <div id="routeInfo" class="tab-content open" role="region" aria-labelledby="">
+      <h3>Stops & Timings</h3>
+      <table class="info-table">
+        <thead>
+          <tr><th>Stop</th><th>     Arrival   </th><th>   Notes  </th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Esa Nagri</td><td>  6:57  </td><td>Start</td></tr>
+          <tr><td>Mashriq Centre</td><td>6:59</td><td>—</td></tr>
+          <tr><td>Stadium</td><td>7:00</td><td>—</td></tr>
+          <tr><td>Dalmia</td><td>7:03</td><td>—</td></tr>
+          <tr><td>Millennium</td><td>7:05</td><td>—</td></tr>
+          <tr><td>Malir 15</td><td>7:25</td><td>—</td></tr>
+          <tr><td>Fast Nu</td><td>07:45</td><td>—</td></tr>
+          <!-- add more rows -->
+        </tbody>
+      </table>
+    </div>
+
+    
+
+    <div id="driverInfo" class="tab-content" role="region">
+      <h3>Driver Information</h3>
+      <p><strong>Name:  IMTIAZ</strong></p>
+      <p><strong>Phone:</strong> <a href="tel:03006390409">0300-6390409</a></p>
+    </div>
+  </main>
+
+  
+  <footer class="foot">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About</h3>
+        <p>
+          Providing safe, reliable, and timely transport services for students
+          across the campus. Nadeem & Jadoon transport services cover all
+          major routes with professional drivers and modern buses.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="nadeem.html">Nadeem Routes</a></li>
+          <li><a href="jadoon.html">Jadoon Routes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+    <div class="footer-rights">
+      <p>&copy; 2025 Sarim and Khizar. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Shared JS (change path if needed) -->
+  <script src="../JS/route.js"></script>
+  <script src="../JS/index.js"></script>
+  
+
+</body>
+</html>

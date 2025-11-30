@@ -1,0 +1,258 @@
+/* Nadeem Route page CSS — replace your current file with this */
+
+/* Use same fonts / behavior as index.css / nadeem.css */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #06263a;
+  --muted: #556b7a;
+  --accent: #0077ff;
+  --box-bg: #f1f5fb;
+  --card-bg: #ffffff;
+}
+
+#navigation {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2%;
+  background-color: #003366;
+  color: #ffffff;
+  position: sticky;
+  transition: background 0.3s;
+  font-size: 25px;
+  font-weight: 1000;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  
+}
+/* Dark mode variables (will work when body has .dark) */
+body.dark {
+  --bg-color: #071021;
+  --text-color: #e7f1fb;
+  --muted: #9fb3c9;
+  --accent: #4aa3ff;
+  --box-bg: #0d1a27;
+  --card-bg: #081522;
+}
+
+/* base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* matches your other CSS */
+  background: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  transition: background 300ms ease, color 300ms ease;
+}
+
+/* page container */
+.page-container {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 0 20px 60px;
+}
+
+/* header area */
+.nadeem-header {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nadeem-title {
+  color: #003366;
+  font-weight: 800;
+  font-size: 4rem; /* matched to your Nadeem page */
+  margin: 0;
+  line-height: 1;
+}
+
+.route-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #003366;
+  margin: 10px 0 6px;
+  letter-spacing: 1px;
+}
+
+.route-sub {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+/* Tabs row */
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons: JS adds .active class on the clicked button */
+.tab-button {
+  padding: 10px 18px;
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.tab-button:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: #1c86ee;
+  box-shadow: 0 10px 24px rgba(2,24,46,0.08);
+}
+
+/* IMPORTANT: JS toggles .active on buttons — use .active here */
+.tab-button.active {
+  background: linear-gradient(90deg, var(--accent), #005fcc);
+  color: #fff;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(2,24,46,0.12);
+}
+
+/* Tab content (hidden by default). JS sets .open on the content and also sets maxHeight inline */
+.tab-content {
+  overflow: hidden;
+  max-height: 0;                 /* collapsed */
+  opacity: 0;
+  transform: translateY(6px);
+  transition: max-height 420ms ease, opacity 320ms ease, transform 320ms ease, padding 200ms ease;
+  background: var(--card-bg);
+  border-radius: 12px;
+  margin: 18px auto 0;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(2,24,46,0.04);
+  padding: 0 18px;               /* reduced when closed (JS will increase padding when open via class) */
+  box-sizing: border-box;
+}
+
+/* Visible state — JS will add .open and set inline maxHeight for perfect animation */
+.tab-content.open {
+  opacity: 1;
+  transform: translateY(0);
+  padding: 18px;
+  /* max-height is set by JS (targetEl.style.maxHeight = scrollHeight + 'px') */
+}
+
+/* nice heading inside tab */
+.tab-content h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #003366;
+  margin: 0 0 1.2rem 0;
+}
+
+/* info table styling (spaced rows + centered headings) */
+.info-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* vertical gap between rows */
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* header cells */
+.info-table thead th {
+  padding: 12px 14px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: #003366;
+  border-radius: 8px;
+}
+
+/* body cells — each row looks like a card */
+.info-table tbody td {
+  padding: 12px 14px;
+  background: var(--box-bg);
+  color: var(--text-color);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* ensure rows don't collapse the rounded backgrounds when adjacent */
+.info-table tbody tr { background: transparent; }
+
+/* responsive map image */
+.route-map {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 8px auto;
+}
+
+/* page controls: dark toggle + back-to-top (keeps same look as index.css) */
+.page-controls {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1200;
+  display: flex;
+  gap: 12px;
+}
+
+.dark-toggle, .back-to-top {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: var(--box-bg);
+  color: var(--text-color);
+  box-shadow: 0 6px 20px rgba(2,24,46,0.06);
+  transition: transform 180ms ease, background 200ms ease;
+}
+.dark-toggle:hover, .back-to-top:hover { transform: scale(1.06); }
+.back-to-top { display: none; }
+.back-to-top.show { display: flex; }
+
+/* small micro-interactions */
+.route-title::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: var(--accent);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+  opacity: .95;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .nadeem-title { font-size: 2.6rem; }
+  .route-title { font-size: 1.6rem; }
+  .tab-button { padding: 9px 12px; font-size: 0.95rem; }
+  .page-container { padding: 0 16px 48px; }
+  .info-table thead th, .info-table tbody td { font-size: 0.98rem; padding: 10px; }
+}
+
+/* small accessibility/visual fixes */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* End of file */
