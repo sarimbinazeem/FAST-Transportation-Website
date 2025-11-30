@@ -1,0 +1,302 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+
+:root{ /*Root is The Parent Selector That Make Global Variables That Can Be Accessible AnyWhere Below*/
+  /* --variable: -> this is how global variable is defined in css */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --box-bg: #f1f1f1;
+  --header-bg: rgba(0,0,0,0.4);
+  --footer-bg: #222;
+  --footer-text: #eee;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --box-bg: #1f1f1f;
+  --header-bg: rgba(255,255,255,0.1);
+  --footer-bg: #111;
+  --footer-text: #ddd;
+}
+
+#navigation {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2%;
+  background-color: #003366;
+  color: #ffffff;
+  position: sticky;
+  transition: background 0.3s;
+  font-size: 25px;
+  font-weight: 1000;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: #1e90ff;
+}
+
+#logo {
+  width: 120px;
+  margin-right: 300px;
+}
+
+
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero-buttons {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #003366;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #003366;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+  font-size: 3rem;
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background-color: #1c86ee;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.btn-subtext {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 4rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.slideshow {
+  width: 100%;
+  height: 450px;
+  position: relative; /*To Get Over The Buttons*/
+  overflow: hidden; /* This Decides Wheteher The Object SHould Exceeds Its Customer Or Not. 
+  Hidden Hides The Extra Image exceeding the container */
+}
+
+.slide.active {
+  opacity: 0.5; /*Automatically Sets to 100% Width,Starts On New Line, Its Width And Height Can Be Controlled Abd Nargin
+  and padding can be added*/
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute; /*So That The Text Gets Above The Image*/
+  top: 50%; /*Moves 50% down from the top*/
+  left: 32%; /*Move % from left side*/
+  /*This transofrm the text 50% Updward its own height*/
+  transform: translateY(-50%);
+  color: #ffffff;
+  /*z-index controls which appears on the front*/
+  z-index: 10;
+  /*Text shadow is used to make the text readable on bright images*/
+  text-shadow: 2px 2px 10px black;
+}
+
+.text-overlay h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.text-overlay h2 {
+  font-size: 50px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.foot {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 5rem 2rem 2rem 2rem;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.foot a:hover {
+  color: #1c86ee;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  /*To get it to center*/
+  margin: 0 auto;
+  gap: 35rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+  font-size: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-rights {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px; /*To Put it on bottom-right*/
+  right: 20px;
+  background: #0077ff;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;  /*cursor changes to hand icon when at the button*/
+  font-size: 30px;
+  display: none; /*So That The Icon Comes Only When It Goes Down*/
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* x-axis pixels, y-axis pixels , blur radius, rgba(red,green,blue,opacity) */
+  z-index: 1000; /*So that it comes at top*/
+  transition: 0.3s; /*Transition Time For It To Scale*/
+}
+
+.back-to-top.show {
+    display: flex; /*Display When It Goes At Bottom*/
+}
+
+.back-to-top:hover {
+    transform: scale(1.1); /*Hovering Makes It Big  1.1-> 10% bigger, 0.9->10% smaller*/
+
+}
+
+
+.dark-toggle {
+  position: fixed;
+  bottom:20px;
+  left:20px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10000; 
+  background: var(--box-bg);
+  color: var(--text-color);
+  border:  none;
+  transition: 0.3s;
+
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+
+.header-text {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+}
+
+.buttons {
+  background: var(--box-bg);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  transition: 0.3s;
+}
+
+footer a {
+  color: var(--footer-text);
+}
